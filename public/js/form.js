@@ -28,6 +28,7 @@ if(name == null){ // means login page is open
             headers: new Headers({'Content-Type': 'application/json'}),
             body: JSON.stringify({
                 email: email.value,
+                password: password.value
             })
         })
         .then(res => res.json())
