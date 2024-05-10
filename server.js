@@ -18,6 +18,7 @@ const app = express();
 
 let intialPath = path.join(__dirname, "public");
 
+
 app.use(bodyParser.json());
 app.use(express.static(intialPath));
 
@@ -32,7 +33,23 @@ app.get('/ritik', (req, res) => {
 app.get('/register', (req, res) => {
     res.sendFile(path.join(intialPath, "register.html"));
 })
+app.get('/:folder', (req, res) => {  
 
+    const folder = req.params.folder;
+    res.send(`You requested the folder: ${folder}`);
+ });
+ 
+ app.get('/jainsongs/', async (req, res) => {
+     try {
+         const directoryPath = path.join(__dirname, 'jainsongs');
+         const files = await fs.readdir(directoryPath);
+         // Assuming you want to send a list of files in the directory back to the client
+         res.send(files);
+     } catch (error) {
+         console.error('Error reading directory:', error);
+         res.status(500).send('Internal Server Error');
+     }
+ });
 app.post('/register-user', (req, res) => {
     const { name, email, password } = req.body;
 
