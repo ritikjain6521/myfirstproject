@@ -8,10 +8,10 @@ const fs = require('fs/promises');
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: 'ritik',
-        database: 'loginformytvideo'
+        host: 'dpg-ctpaed0gph6c73dc4bug-a',
+        user: 'ritik_6dmd',
+        password: 'cjTVjKFgshRtuhrzK4qEDIxDqH7ZiyqG',
+        database: 'ritik_6dmd_user'
     }
 });
 
