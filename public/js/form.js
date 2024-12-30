@@ -51,6 +51,7 @@ if(name == null){ // means login page is open
         .then(res => res.json())
         .then(data => {
             validateData(data);
+            console.log(data)
         })
     })
 
