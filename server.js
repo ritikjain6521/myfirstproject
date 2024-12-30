@@ -98,7 +98,7 @@ app.post('/register-user', (req, res) => {
                 password: password
             })
             .returning(["name", "email"])
-            .then(data => {s
+            .then(data => {
                 res.json(data[0]);
             })
             .catch(err => {
