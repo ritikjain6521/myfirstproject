@@ -92,7 +92,7 @@ app.post('/register-user', (req, res) => {
     if (!name.length || !email.length || !password.length) {
         res.json('fill all the fields');
     } else {
-        db("Users").insert({
+        db("users").insert({
                 name: name,
                 email: email,
                 password: password
@@ -113,7 +113,7 @@ app.post('/register-user', (req, res) => {
 app.post('/login-user', (req, res) => {
     const { email, password } = req.body;
     db.select('name', 'email')
-        .from('Users')
+        .from('users')
         .where({
             email: email,
             password: password
