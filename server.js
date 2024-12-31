@@ -8,10 +8,10 @@ const fs = require('fs/promises');
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'dpg-ctpaed0gph6c73dc4bug-a',
-        user: 'ritik_6dmd_user',
-        password: 'cjTVjKFgshRtuhrzK4qEDIxDqH7ZiyqG',
-        database: 'ritik_6dmd'
+        host: '127.0.0.1',
+        user: 'postgres',
+        password: 'ritik',
+        database: 'loginformytvideo'
     }
 });
 
@@ -92,7 +92,7 @@ app.post('/register-user', (req, res) => {
     if (!name.length || !email.length || !password.length) {
         res.json('fill all the fields');
     } else {
-        db("Ragister").insert({
+        db("users").insert({
                 name: name,
                 email: email,
                 password: password
@@ -113,7 +113,7 @@ app.post('/register-user', (req, res) => {
 app.post('/login-user', (req, res) => {
     const { email, password } = req.body;
     db.select('name', 'email')
-        .from('Ragister')
+        .from('users')
         .where({
             email: email,
             password: password
