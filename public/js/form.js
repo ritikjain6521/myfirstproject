@@ -39,7 +39,7 @@ if(name == null){ // means login page is open
 } else{ // means register page is open
 
     submitBtn.addEventListener('click', () => {
-        fetch('/user-user', {
+        fetch('/register-user', {
             method: 'post',
             headers: new Headers({'Content-Type': 'application/json'}),
             body: JSON.stringify({
@@ -51,7 +51,7 @@ if(name == null){ // means login page is open
         .then(res => res.json())
         .then(data => {
             validateData(data);
-            console.log(data)
+            
         })
     })
 
