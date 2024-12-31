@@ -86,13 +86,13 @@ app.get('/jainsongs/:folder/info.json', async (req, res) => {
 });
 
 
-app.post('/user-user', (req, res) => {
+app.post('/register-user', (req, res) => {
     const { name, email, password } = req.body;
 
     if (!name.length || !email.length || !password.length) {
         res.json('fill all the fields');
     } else {
-        db("user").insert({
+        db("users").insert({
                 name: name,
                 email: email,
                 password: password
@@ -113,7 +113,7 @@ app.post('/user-user', (req, res) => {
 app.post('/login-user', (req, res) => {
     const { email, password } = req.body;
     db.select('name', 'email')
-        .from('user')
+        .from('users')
         .where({
             email: email,
             password: password
