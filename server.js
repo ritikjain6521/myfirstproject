@@ -9,9 +9,9 @@ const db = knex({
     client: 'pg',
     connection: {
         host: 'dpg-ctpaed0gph6c73dc4bug-a',
-        user: 'ritik_6dmd',
+        user: 'ritik_6dmd_user',
         password: 'cjTVjKFgshRtuhrzK4qEDIxDqH7ZiyqG',
-        database: 'ritik_6dmd_user'
+        database: 'ritik_6dmd'
     }
 });
 
