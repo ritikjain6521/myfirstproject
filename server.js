@@ -86,7 +86,7 @@ app.get('/jainsongs/:folder/info.json', async (req, res) => {
 });
 
 
-app.post('/register-user', (req, res) => {
+app.post('/user-user', (req, res) => {
     const { name, email, password } = req.body;
 
     if (!name.length || !email.length || !password.length) {
