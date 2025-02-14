@@ -23,7 +23,7 @@ const submitBtn = document.querySelector('.submit-btn');
 
 if(name == null){ // means login page is open
     submitBtn.addEventListener('click', () => {
-        fetch('/login-user',{
+        fetch('/login-users',{
             method: 'post',
             headers: new Headers({'Content-Type': 'application/json'}),
             body: JSON.stringify({
@@ -39,7 +39,7 @@ if(name == null){ // means login page is open
 } else{ // means register page is open
 
     submitBtn.addEventListener('click', () => {
-        fetch('/register-user', {
+        fetch('/register-users', {
             method: 'post',
             headers: new Headers({'Content-Type': 'application/json'}),
             body: JSON.stringify({
