@@ -1,4 +1,4 @@
-# Backend Login Form
+# Full Stack Music App
 
 Once you clone it make sure you run 'npm install' command to install all libraries mention in package.json file.# 🎵 MERN Stack Music Streaming Website
 
