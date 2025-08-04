@@ -8,10 +8,10 @@ const fs = require('fs/promises');
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'dpg-d1c1meodl3ps73f68t90-a',
-        user: 'musicapp_l46b_user',
-        password: 'ZTXXU2ZCs9ToUjRh4thZD1OT5gAJdjVV',
-        database: 'musicapp_l46b'
+        host: 'dpg-d286kseuk2gs73eujqbg-a',
+        user: 'music_app_1tsq_user',
+        password: 'kGbX1msG602gO1OZCq3iEifSsovKArQR',
+        database: 'music_app_1tsq'
     }
 });
 
